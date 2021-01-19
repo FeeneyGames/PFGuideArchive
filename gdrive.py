@@ -12,6 +12,19 @@ class DriveDownloader():
         creds = ServiceAccountCredentials.from_json_keyfile_name(cred_json_path, SCOPES)
         self.service = build("drive", "v3", credentials=creds)
 
+    def save_doc(self, file_id):
+        file_buffer, file_type = self.download_doc(file_id)
+        file_name = self.get_doc_name(file_id)
+        type_to_extension = {
+            "application/pdf": ".pdf",
+            "application/zip": ".zip"
+        }
+        if file_type not in type_to_extension:
+            raise ValueError("File with unhandled type:\n" + file_type)
+        file_ext = type_to_extension[file_type]
+        with open("archive/" + file_name + file_ext, "wb") as f:
+            f.write(file_buffer.getbuffer())
+
     def download_doc(self, file_id):
         """Download a Google Doc from the file id
 
@@ -22,7 +35,8 @@ class DriveDownloader():
             Exception: [description]
 
         Returns:
-            io.BytesIO: Binary stream representing the file
+            (io.BytesIO, str): Binary stream representing the file,
+                               Type of file stream
         """
         # determine correct mimeType
         cur_type = self.get_doc_type(file_id)
@@ -35,6 +49,8 @@ class DriveDownloader():
         else:
             download_type = type_map[cur_type]
         # construct request to Google Docs
+        # TODO instead use export links to avoid file size limit
+        # https://stackoverflow.com/questions/40890534/google-drive-rest-api-files-export-limitation
         request = self.service.files().export_media(fileId=file_id, mimeType=download_type)
         # construct buffer and downloader
         file_buffer = io.BytesIO()
@@ -43,7 +59,7 @@ class DriveDownloader():
         done = False
         while done is False:
             status, done = downloader.next_chunk()
-        return file_buffer
+        return file_buffer, download_type
 
     def get_doc_metadata(self, file_id):
         # gets default metadata fields
