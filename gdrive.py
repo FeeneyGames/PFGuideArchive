@@ -16,7 +16,7 @@ class DriveDownloader():
     def save_doc(self, file_id):
         # download the file and get name from Docs
         file_buffer, file_type = self.download_doc(file_id)
-        file_name = self.get_doc_name(file_id)
+        file_name = self.sanitize_name(self.get_doc_name(file_id))
         # map Docs file type to proper file extension
         type_to_extension = {
             "application/pdf": ".pdf",
@@ -116,3 +116,19 @@ class DriveDownloader():
         if end_ind > -1:
             field = field[:end_ind]
         return field
+
+    def sanitize_name(self, name):
+        # maps invalid path character to a similar unicode character
+        char_to_sanitized = {
+            "<": "˂",
+            ">": "˃",
+            ":": "։",
+            "\"": "ʺ",
+            "/": "∕",
+            "\\": "∖",
+            "|": "ǀ",
+            "?": "Ɂ",
+            "*": "∗"
+        }
+        return "".join(char_to_sanitized[char] if char in char_to_sanitized else char
+                       for char in name)
