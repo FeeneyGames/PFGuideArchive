@@ -1,0 +1,151 @@
+Exception for URL:
+https://docs.google.com/spreadsheet/ccc?key=0Agyi5tgUTatCdHFjS05Kb18xVGd2bTZhak5YaGQtMFE#gid=3
+Spreadsheets not yet handled
+Exception for file ID:
+1hChbcEsEfQsR7NkwKlzO-GLYtrOtxlkGHpRQgKKZ5gc
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1hChbcEsEfQsR7NkwKlzO-GLYtrOtxlkGHpRQgKKZ5gc/export?mimeType=application%2Fzip&alt=media returned "This file is too large to be exported.". Details: "This file is too large to be exported."> 
+Exception for file ID:
+1aAX0IU_93HEYt6YC1HsfYZ_VtEHKaVs9rbXcmY7WJto
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1aAX0IU_93HEYt6YC1HsfYZ_VtEHKaVs9rbXcmY7WJto/export?mimeType=application%2Fzip&alt=media returned "This file cannot be exported by the user.". Details: "This file cannot be exported by the user.">
+Exception for file ID:
+17YnRW-LlKLUAW6cZ0EwndgpR35EDLk7jFI_0Z1ydtzU
+[Errno 22] Invalid argument: 'archive/"Blow them to smithereens!" A.K.A. "There WAS a Boss.": A Guide to the Master Blaster Caster.zip'
+Exception for file ID:
+0B9vv1a7v3y5BZjJSaU5wY3NvdEk
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B9vv1a7v3y5BZjJSaU5wY3NvdEk/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1e1Sm-TxR0RJHm45zz_ZCgArDBg5S4rtozMdbSQfhTvc
+File ID identifies document with unhandled type:
+application/vnd.google-apps.form
+Exception for file ID:
+1HeZsjl3IsfTgJa-_nIEsbxbqSSC1Z4SyoXfhbnc0Z48
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1HeZsjl3IsfTgJa-_nIEsbxbqSSC1Z4SyoXfhbnc0Z48?alt=json returned "File not found: 1HeZsjl3IsfTgJa-_nIEsbxbqSSC1Z4SyoXfhbnc0Z48.". Details: "File not found: 1HeZsjl3IsfTgJa-_nIEsbxbqSSC1Z4SyoXfhbnc0Z48.">
+Exception for file ID:
+1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA?alt=json returned "File not found: 1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA.". Details: "File not found: 1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA.">
+Exception for file ID:
+0AcNyxDTKvAmqZGRtZzhzdjZfMGM4NzN2eGM2
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/0AcNyxDTKvAmqZGRtZzhzdjZfMGM4NzN2eGM2?alt=json returned "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfMGM4NzN2eGM2.". Details: "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfMGM4NzN2eGM2.">
+Exception for file ID:
+0B5kvBvq2DEHjRWctNG05X0JINm8
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B5kvBvq2DEHjRWctNG05X0JINm8/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1qCtTL94PtU1fjtELj9Ga7dYWhZpM0KOPd9EBzUuMGl4
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1qCtTL94PtU1fjtELj9Ga7dYWhZpM0KOPd9EBzUuMGl4?alt=json returned "File not found: 1qCtTL94PtU1fjtELj9Ga7dYWhZpM0KOPd9EBzUuMGl4.". Details: "File not found: 1qCtTL94PtU1fjtELj9Ga7dYWhZpM0KOPd9EBzUuMGl4.">
+Exception for file ID:
+1bGYV4nTaUQ7DZ0K-bLJsigtWujhQl9gJsW5tVOtmuuE#
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1bGYV4nTaUQ7DZ0K-bLJsigtWujhQl9gJsW5tVOtmuuE%23?alt=json returned "File not found: 1bGYV4nTaUQ7DZ0K-bLJsigtWujhQl9gJsW5tVOtmuuE#.". Details: "File not found: 1bGYV4nTaUQ7DZ0K-bLJsigtWujhQl9gJsW5tVOtmuuE#.">
+Exception for file ID:
+1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg?alt=json returned "File not found: 1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg.". Details: "File not found: 1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg.">
+Exception for file ID:
+0AcNyxDTKvAmqZGRtZzhzdjZfNDZnNHpzcmdodA
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/0AcNyxDTKvAmqZGRtZzhzdjZfNDZnNHpzcmdodA?alt=json returned "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNDZnNHpzcmdodA.". Details: "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNDZnNHpzcmdodA.">     
+Exception for file ID:
+0AcNyxDTKvAmqZGRtZzhzdjZfNDBnM3d6OHRjNg
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/0AcNyxDTKvAmqZGRtZzhzdjZfNDBnM3d6OHRjNg?alt=json returned "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNDBnM3d6OHRjNg.". Details: "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNDBnM3d6OHRjNg.">     
+Exception for file ID:
+0AcNyxDTKvAmqZGRtZzhzdjZfNDlmZ3Y2YjNjdA
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/0AcNyxDTKvAmqZGRtZzhzdjZfNDlmZ3Y2YjNjdA?alt=json returned "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNDlmZ3Y2YjNjdA.". Details: "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNDlmZ3Y2YjNjdA.">     
+Exception for file ID:
+1PXamF43boZgYtCUlyJAMojfrPaAdYyjPOaGOo1vfqdM
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1PXamF43boZgYtCUlyJAMojfrPaAdYyjPOaGOo1vfqdM/export?mimeType=application%2Fzip&alt=media returned "This file is too large to be exported.". Details: "This file is too large to be exported."> 
+Exception for file ID:
+0B7y1bJwiGxOQYS1ETlJvWHBua0E
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B7y1bJwiGxOQYS1ETlJvWHBua0E/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B9vv1a7v3y5BLTlQVlZ6TDI0RTg
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B9vv1a7v3y5BLTlQVlZ6TDI0RTg/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0ByRf9gGg2fwGaUphWjlpNEhZbWM
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0ByRf9gGg2fwGaUphWjlpNEhZbWM/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B7b8EGfd1Lu3MTNiMjIyMjUtOWVkYS00ODEyLTkwMTAtMTI3Yjk1MTFkNDFk
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B7b8EGfd1Lu3MTNiMjIyMjUtOWVkYS00ODEyLTkwMTAtMTI3Yjk1MTFkNDFk/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B1bu5RkMqNkZR1hpQjNfcDNsUEU
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B1bu5RkMqNkZR1hpQjNfcDNsUEU/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1r-Wh9DgkEwF3Wtj8QMDTdF2kVpQVCS5BCjU2vPcG7Wk
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1r-Wh9DgkEwF3Wtj8QMDTdF2kVpQVCS5BCjU2vPcG7Wk/export?mimeType=application%2Fzip&alt=media returned "This file is too large to be exported.". Details: "This file is too large to be exported."> 
+Exception for file ID:
+0B9vv1a7v3y5BZjJSaU5wY3NvdEk
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B9vv1a7v3y5BZjJSaU5wY3NvdEk/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1e1Sm-TxR0RJHm45zz_ZCgArDBg5S4rtozMdbSQfhTvc
+File ID identifies document with unhandled type:
+application/vnd.google-apps.form
+Exception for file ID:
+0AcNyxDTKvAmqZGRtZzhzdjZfNWM0cTliaGdw
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/0AcNyxDTKvAmqZGRtZzhzdjZfNWM0cTliaGdw?alt=json returned "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNWM0cTliaGdw.". Details: "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfNWM0cTliaGdw.">
+Exception for file ID:
+1Fd8ptm8-YndnMs3kLoCuEsA14cTxLYUz8t-rgFSC0lM
+[Errno 22] Invalid argument: 'archive/"You\'re Such a Sap!" A Step-By-Step Guide to the Revisited Sap Master.zip'
+Exception for file ID:
+0B5kvBvq2DEHjY2pwRUNXcG5Ybjg
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B5kvBvq2DEHjY2pwRUNXcG5Ybjg/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1C2ah3ZD0RVF9HdTtr0G_heCdyRXkuxQ4i0317QCwvvA
+[Errno 2] No such file or directory: 'archive/Sorc Nuke/Blast Guide for PFS.zip'
+Exception for file ID:
+13IZTV59ItNsK63RHQo2XGkjMKiU8LfRu5PCaE3R5lco
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/13IZTV59ItNsK63RHQo2XGkjMKiU8LfRu5PCaE3R5lco?alt=json returned "File not found: 13IZTV59ItNsK63RHQo2XGkjMKiU8LfRu5PCaE3R5lco.". Details: "File not found: 13IZTV59ItNsK63RHQo2XGkjMKiU8LfRu5PCaE3R5lco.">
+Exception for file ID:
+0AcNyxDTKvAmqZGRtZzhzdjZfMTFmNXdwM2ZjeA
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/0AcNyxDTKvAmqZGRtZzhzdjZfMTFmNXdwM2ZjeA?alt=json returned "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfMTFmNXdwM2ZjeA.". Details: "File not found: 0AcNyxDTKvAmqZGRtZzhzdjZfMTFmNXdwM2ZjeA.">     
+Exception for file ID:
+0B_E5ym1-3f-uRUItWXUzQzZnQjg
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B_E5ym1-3f-uRUItWXUzQzZnQjg/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B1bu5RkMqNkZbHpHRF9RX09ZWE0
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B1bu5RkMqNkZbHpHRF9RX09ZWE0/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B0NP0qPr6hs-czVmdXBXX3BrOHM
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B0NP0qPr6hs-czVmdXBXX3BrOHM/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q?alt=json returned "File not found: 1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q.". Details: "File not found: 1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q.">
+Exception for file ID:
+1C4K18CJ6_2YKU6VuiNhwSZylyhBg39qBBABGfTjBmWM
+File ID identifies document with unhandled type:
+application/vnd.google-apps.spreadsheet
+Exception for file ID:
+1lCZ7iUiu4nsoD-cyoB-DLycQG0AjDM23
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1lCZ7iUiu4nsoD-cyoB-DLycQG0AjDM23/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">        
+Exception for file ID:
+1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q?alt=json returned "File not found: 1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q.". Details: "File not found: 1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q.">
+Exception for file ID:
+1tpVCGBAbXMHb40DMKc2RqVDD5ghZvfzC
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1tpVCGBAbXMHb40DMKc2RqVDD5ghZvfzC/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">        
+Exception for file ID:
+0B1xywEW58IoLVXFSenJPQWVkU2M
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B1xywEW58IoLVXFSenJPQWVkU2M/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1m6CtL-0cImywzv9ugTq85cL_j6U7ve4_
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1m6CtL-0cImywzv9ugTq85cL_j6U7ve4_/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">        
+Exception for file ID:
+0B5kvBvq2DEHjR1dOeEVkRUU4WlU
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B5kvBvq2DEHjR1dOeEVkRUU4WlU/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B5kvBvq2DEHjTVF4NEY4SXpSTUU
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B5kvBvq2DEHjTVF4NEY4SXpSTUU/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B5kvBvq2DEHjRU5FRWV6eDAwa1k
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B5kvBvq2DEHjRU5FRWV6eDAwa1k/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B5kvBvq2DEHjRWFhSWc1ZzAzaDg
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B5kvBvq2DEHjRWFhSWc1ZzAzaDg/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+0B_E5ym1-3f-uaWpVdFlqNEp6S28
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B_E5ym1-3f-uaWpVdFlqNEp6S28/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
+Exception for file ID:
+1Biz9vWwPXt9NR3t4i0fST1etNRBpUEKTfL8oFe5zwgc
+File ID identifies document with unhandled type:
+application/vnd.google-apps.spreadsheet
+Exception for file ID:
+1dCrQZIdtOEkKUZCC_lGgucgHSghCHysg6N0pAOi1vaY
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1dCrQZIdtOEkKUZCC_lGgucgHSghCHysg6N0pAOi1vaY?alt=json returned "File not found: 1dCrQZIdtOEkKUZCC_lGgucgHSghCHysg6N0pAOi1vaY.". Details: "File not found: 1dCrQZIdtOEkKUZCC_lGgucgHSghCHysg6N0pAOi1vaY.">
+Exception for file ID:
+0B1bu5RkMqNkZR1hpQjNfcDNsUEU
+<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/0B1bu5RkMqNkZR1hpQjNfcDNsUEU/export?mimeType=application%2Fpdf&alt=media returned "Export only supports Docs Editors files.". Details: "Export only supports Docs Editors files.">
