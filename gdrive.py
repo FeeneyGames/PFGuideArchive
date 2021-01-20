@@ -1,4 +1,5 @@
 import io
+import os
 
 from apiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
@@ -13,8 +14,10 @@ class DriveDownloader():
         self.service = build("drive", "v3", credentials=creds)
 
     def save_doc(self, file_id):
+        # download the file and get name from Docs
         file_buffer, file_type = self.download_doc(file_id)
         file_name = self.get_doc_name(file_id)
+        # map Docs file type to proper file extension
         type_to_extension = {
             "application/pdf": ".pdf",
             "application/zip": ".zip"
@@ -22,8 +25,11 @@ class DriveDownloader():
         if file_type not in type_to_extension:
             raise ValueError("File with unhandled type:\n" + file_type)
         file_ext = type_to_extension[file_type]
-        with open("archive/" + file_name + file_ext, "wb") as f:
-            f.write(file_buffer.getbuffer())
+        # write file
+        file_path = "archive/" + file_name + file_ext
+        if not os.path.exists(file_path):
+            with open(file_path, "wb") as f:
+                f.write(file_buffer.getbuffer())
 
     def download_doc(self, file_id):
         """Download a Google Doc from the file id
@@ -48,10 +54,13 @@ class DriveDownloader():
             raise ValueError("File ID identifies document with unhandled type:\n" + cur_type)
         else:
             download_type = type_map[cur_type]
-        # construct request to Google Docs
-        # TODO instead use export links to avoid file size limit
-        # https://stackoverflow.com/questions/40890534/google-drive-rest-api-files-export-limitation
+        # construct request for export URLs
+        url_request = self.service.files().get(fileId=file_id, fields="exportLinks")
+        export_urls = url_request.execute()["exportLinks"]
+        # construct request to get exported file
         request = self.service.files().export_media(fileId=file_id, mimeType=download_type)
+        # use export links to avoid file size limit instead of export function
+        request.uri = export_urls[download_type]
         # construct buffer and downloader
         file_buffer = io.BytesIO()
         downloader = MediaIoBaseDownload(file_buffer, request)
