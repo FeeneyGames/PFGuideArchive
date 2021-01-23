@@ -41,6 +41,9 @@ class DriveDownloader():
             file_path = "archive/" + file_name + file_ext
         else:
             file_path = "archive/" + file_name
+        # get rid of trailing white space for ZIP files (causes issues when extracting)
+        if file_path[-4:] == ".zip":
+            file_path = file_path[:-4].rstrip() + ".zip"
         # download and write file if not archived already or if updating archive
         if not os.path.exists(file_path) or update_archive:
             file_buffer, _ = self.download_doc(file_id, download_type)

@@ -1,3 +1,6 @@
+import os
+import zipfile
+
 from gdrive import DriveDownloader
 from zenith import ZenithParser
 
@@ -24,3 +27,10 @@ for file_id in docs_file_ids:
     except Exception as e:
         print("Exception for file ID:\n" + file_id)
         print(e)
+# extract zips
+archive_dir = "archive"
+zip_files = [file_name for file_name in os.listdir(archive_dir)
+             if os.path.isfile(os.path.join(archive_dir, file_name)) and file_name[-4:] == ".zip"]
+for file_name in zip_files:
+    with zipfile.ZipFile(os.path.join(archive_dir, file_name), "r") as zip_f:
+        zip_f.extractall(os.path.join(archive_dir, file_name[:-4]))
