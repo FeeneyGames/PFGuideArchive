@@ -30,7 +30,8 @@ class DriveDownloader():
         # map Docs file type to proper file extension
         type_to_extension = {
             "application/pdf": ".pdf",
-            "application/zip": ".zip"
+            "application/zip": ".zip",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ".xlsx"
         }
         if download_type not in type_to_extension:
             raise ValueError("File with unhandled type:\n" + download_type)
@@ -81,7 +82,8 @@ class DriveDownloader():
         if download_type is None:
             download_type = self.get_download_type(file_id)
         # determine download method from mimeType
-        export_types = ["application/zip"]
+        export_types = ["application/zip",
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]
         download_types = ["application/pdf"]
         if download_type in export_types:
             # construct request for export URLs
@@ -136,7 +138,9 @@ class DriveDownloader():
         cur_type = self.get_doc_type(file_id)
         type_map = {
             "application/pdf": "application/pdf",
-            "application/vnd.google-apps.document": "application/zip"
+            "application/vnd.google-apps.document": "application/zip",
+            "application/vnd.google-apps.spreadsheet":
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         }
         if cur_type not in type_map:
             raise ValueError("File ID identifies document with unhandled type:\n" + cur_type)
