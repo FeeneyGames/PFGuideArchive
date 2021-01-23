@@ -35,8 +35,12 @@ class DriveDownloader():
         if download_type not in type_to_extension:
             raise ValueError("File with unhandled type:\n" + download_type)
         file_ext = type_to_extension[download_type]
-        # download and write file if not archived or updating archive
-        file_path = "archive/" + file_name + file_ext
+        # create file path without duplicate extensions
+        if file_name[-len(file_ext):] != file_ext:
+            file_path = "archive/" + file_name + file_ext
+        else:
+            file_path = "archive/" + file_name
+        # download and write file if not archived already or if updating archive
         if not os.path.exists(file_path) or update_archive:
             file_buffer, _ = self.download_doc(file_id, download_type)
             with open(file_path, "wb") as f:
@@ -47,22 +51,13 @@ class DriveDownloader():
 
         Args:
             file_id (str): ID for the Google Doc
-            download_type (str, optional): mimeType to export file as. Defaults to None.
+            download_type (str, optional): mimeType to download file as. Defaults to None.
 
         Returns:
             (io.BytesIO, str): Binary stream representing the file,
                                Type of file stream
         """
-        # determine type to export document as
-        if download_type is None:
-            download_type = self.get_download_type(file_id)
-        # construct request for export URLs
-        url_request = self.service.files().get(fileId=file_id, fields="exportLinks")
-        export_urls = url_request.execute()["exportLinks"]
-        # construct request to get exported file
-        request = self.service.files().export_media(fileId=file_id, mimeType=download_type)
-        # use export links to avoid file size limit instead of export function
-        request.uri = export_urls[download_type]
+        request = self.download_request(file_id, download_type)
         # construct buffer and downloader
         file_buffer = io.BytesIO()
         downloader = MediaIoBaseDownload(file_buffer, request)
@@ -71,6 +66,36 @@ class DriveDownloader():
         while done is False:
             status, done = downloader.next_chunk()
         return file_buffer, download_type
+
+    def download_request(self, file_id, download_type=None):
+        """Create request to download a Google Doc from the file id
+
+        Args:
+            file_id (str): ID for the Google Doc
+            download_type (str, optional): mimeType to download file as. Defaults to None.
+
+        Returns:
+            HttpRequest: Request to download a Google Doc from the file id
+        """
+        # determine type to export document as
+        if download_type is None:
+            download_type = self.get_download_type(file_id)
+        # determine download method from mimeType
+        export_types = ["application/zip"]
+        download_types = ["application/pdf"]
+        if download_type in export_types:
+            # construct request for export URLs
+            url_request = self.service.files().get(fileId=file_id, fields="exportLinks")
+            export_urls = url_request.execute()["exportLinks"]
+            # construct request to get exported file
+            request = self.service.files().export_media(fileId=file_id, mimeType=download_type)
+            # use export links to avoid file size limit instead of export function
+            request.uri = export_urls[download_type]
+        elif download_type in download_types:
+            request = self.service.files().get_media(fileId=file_id)
+        else:
+            raise ValueError("Unexpected download type:\n" + download_type)
+        return request
 
     def get_doc_metadata(self, file_id):
         """Gets default Docs metadata fields
