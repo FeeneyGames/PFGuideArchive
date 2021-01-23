@@ -13,47 +13,49 @@ class DriveDownloader():
         creds = ServiceAccountCredentials.from_json_keyfile_name(cred_json_path, SCOPES)
         self.service = build("drive", "v3", credentials=creds)
 
-    def save_doc(self, file_id):
-        # download the file and get name from Docs
-        file_buffer, file_type = self.download_doc(file_id)
+    def save_doc(self, file_id, update_archive=False):
+        """Save document in archive
+
+        Args:
+            file_id (str): ID for the Google Doc
+            update_archive (bool, optional): Whether to redownload and update archived Docs.
+                                             Defaults to False.
+
+        Raises:
+            ValueError: File with unhandled type.
+        """
+        # get name and download type from Docs
         file_name = self.sanitize_name(self.get_doc_name(file_id))
+        download_type = self.get_download_type(file_id)
         # map Docs file type to proper file extension
         type_to_extension = {
             "application/pdf": ".pdf",
             "application/zip": ".zip"
         }
-        if file_type not in type_to_extension:
-            raise ValueError("File with unhandled type:\n" + file_type)
-        file_ext = type_to_extension[file_type]
-        # write file
+        if download_type not in type_to_extension:
+            raise ValueError("File with unhandled type:\n" + download_type)
+        file_ext = type_to_extension[download_type]
+        # download and write file if not archived or updating archive
         file_path = "archive/" + file_name + file_ext
-        if not os.path.exists(file_path):
+        if not os.path.exists(file_path) or update_archive:
+            file_buffer, _ = self.download_doc(file_id, download_type)
             with open(file_path, "wb") as f:
                 f.write(file_buffer.getbuffer())
 
-    def download_doc(self, file_id):
+    def download_doc(self, file_id, download_type=None):
         """Download a Google Doc from the file id
 
         Args:
             file_id (str): ID for the Google Doc
-
-        Raises:
-            Exception: [description]
+            download_type (str, optional): mimeType to export file as. Defaults to None.
 
         Returns:
             (io.BytesIO, str): Binary stream representing the file,
                                Type of file stream
         """
-        # determine correct mimeType
-        cur_type = self.get_doc_type(file_id)
-        type_map = {
-            "application/pdf": "application/pdf",
-            "application/vnd.google-apps.document": "application/zip"
-        }
-        if cur_type not in type_map:
-            raise ValueError("File ID identifies document with unhandled type:\n" + cur_type)
-        else:
-            download_type = type_map[cur_type]
+        # determine type to export document as
+        if download_type is None:
+            download_type = self.get_download_type(file_id)
         # construct request for export URLs
         url_request = self.service.files().get(fileId=file_id, fields="exportLinks")
         export_urls = url_request.execute()["exportLinks"]
@@ -71,14 +73,61 @@ class DriveDownloader():
         return file_buffer, download_type
 
     def get_doc_metadata(self, file_id):
-        # gets default metadata fields
+        """Gets default Docs metadata fields
+
+        Args:
+            file_id (str): ID for the Google Doc
+
+        Returns:
+            dict: Metadata dict
+        """
         response_dict = self.service.files().get(fileId=file_id).execute()
         return response_dict
 
     def get_doc_type(self, file_id):
+        """Gets Doc mimeType
+
+        Args:
+            file_id (str): ID for the Google Doc
+
+        Returns:
+            str: mimeType for the Doc
+        """
         return self.get_doc_metadata(file_id)["mimeType"]
 
+    def get_download_type(self, file_id):
+        """Convert Doc mimeType to desired export mimeType
+
+        Args:
+            file_id (str): ID for the Google Doc
+
+        Raises:
+            ValueError: File ID identifies document with unhandled type.
+
+        Returns:
+            str: Desired export mimeType
+        """
+        # determine correct mimeType
+        cur_type = self.get_doc_type(file_id)
+        type_map = {
+            "application/pdf": "application/pdf",
+            "application/vnd.google-apps.document": "application/zip"
+        }
+        if cur_type not in type_map:
+            raise ValueError("File ID identifies document with unhandled type:\n" + cur_type)
+        else:
+            download_type = type_map[cur_type]
+        return download_type
+
     def get_doc_name(self, file_id):
+        """Gets Doc name
+
+        Args:
+            file_id (str): ID for the Google Doc
+
+        Returns:
+            str: Name of the Doc
+        """
         return self.get_doc_metadata(file_id)["name"]
 
     def url_to_file_id(self, url):
@@ -118,7 +167,14 @@ class DriveDownloader():
         return field
 
     def sanitize_name(self, name):
-        # maps invalid path character to a similar unicode character
+        """Map invalid path character to a similar unicode character
+
+        Args:
+            name (str): Name to sanitize
+
+        Returns:
+            str: Name sanitized for filepath usage
+        """
         char_to_sanitized = {
             "<": "˂",
             ">": "˃",
