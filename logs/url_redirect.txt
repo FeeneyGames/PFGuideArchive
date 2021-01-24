@@ -1,0 +1,115 @@
+Redirecting URL:
+https://docs.google.com/document/d/1QD-NyfjYoHaMwi_13h-MDa6u896Rmz-OO4FxNm-Cu4g/edit# => https://docs.google.com/document/d/1QD-NyfjYoHaMwi_13h-MDa6u896Rmz-OO4FxNm-Cu4g/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1XqcFr980WIYJSmk7n68ZV1mVL50vCgrJy4ZDdRPWaIU/ => https://docs.google.com/document/d/1XqcFr980WIYJSmk7n68ZV1mVL50vCgrJy4ZDdRPWaIU/edit
+
+Redirecting URL:
+https://docs.google.com/forms/d/1e1Sm-TxR0RJHm45zz_ZCgArDBg5S4rtozMdbSQfhTvc/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en => https://docs.google.com/forms/d/e/1FAIpQLSc6ssRIzOK_OLrFeI7ciyC05BJAn3OcYMowNAyl0zWaQfkckQ/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en
+
+Exception for URL:
+https://docs.google.com/forms/d/e/1FAIpQLSc6ssRIzOK_OLrFeI7ciyC05BJAn3OcYMowNAyl0zWaQfkckQ/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en
+Forms not supported
+
+Exception for URL request:
+https://docs.google.com/document/d/1HeZsjl3IsfTgJa-_nIEsbxbqSSC1Z4SyoXfhbnc0Z48/edit?pli=1
+HTTP Error 410: Gone
+
+Redirecting URL:
+https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfMGM4NzN2eGM2&hl=en => https://docs.google.com/document/d/1vYT7lEwimdjo0T8NoJ8C2-wMueWMk68gZL_9pTIU4aE/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1h6-_4HvPvV-Tt7I67Gi_oPhgHmeDVA5SBl-WrJSgf5s/edit?hl=en# => https://docs.google.com/document/d/1h6-_4HvPvV-Tt7I67Gi_oPhgHmeDVA5SBl-WrJSgf5s/edit?hl=en
+
+Exception for URL request:
+https://docs.google.com/document/edit?id=1qCtTL94PtU1fjtELj9Ga7dYWhZpM0KOPd9EBzUuMGl4
+HTTP Error 410: Gone
+
+Exception for URL request:
+https://docs.google.com/document/edit?id=1bGYV4nTaUQ7DZ0K-bLJsigtWujhQl9gJsW5tVOtmuuE#
+HTTP Error 403: Forbidden
+
+Redirecting URL:
+https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfNDZnNHpzcmdodA&hl=en => https://docs.google.com/document/d/1xrMC87TpmdfjB9xorkhY3_xWz3guOunTaotgWhoKYMA/edit
+
+Redirecting URL:
+https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfNDBnM3d6OHRjNg&hl=en => https://docs.google.com/document/d/1WLR6brLr0EA3LbQ6UihsliPiyPYSlLjrNbUShPty4bo/edit
+
+Redirecting URL:
+https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfNDlmZ3Y2YjNjdA&hl=en => https://docs.google.com/document/d/1TUvw-QOBsvCBeMcpUGDlo-0BKsFuEHynDQhgX8HmzKo/edit
+
+Redirecting URL:
+https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B7b8EGfd1Lu3MTNiMjIyMjUtOWVkYS00ODEyLTkwMTAtMTI3Yjk1MTFkNDFk&hl=en_US => https://drive.google.com/file/d/0B7b8EGfd1Lu3MTNiMjIyMjUtOWVkYS00ODEyLTkwMTAtMTI3Yjk1MTFkNDFk/view
+
+Redirecting URL:
+https://docs.google.com/document/d/1unTEBA-yQ5on8JqZlaJlXkpw2j7q0IRxo2upCZizDsI/edit?pref=2&pli=1# => https://docs.google.com/document/d/1unTEBA-yQ5on8JqZlaJlXkpw2j7q0IRxo2upCZizDsI/edit?pref=2&pli=1
+
+Redirecting URL:
+https://docs.google.com/forms/d/1e1Sm-TxR0RJHm45zz_ZCgArDBg5S4rtozMdbSQfhTvc/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en => https://docs.google.com/forms/d/e/1FAIpQLSc6ssRIzOK_OLrFeI7ciyC05BJAn3OcYMowNAyl0zWaQfkckQ/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en
+
+Exception for URL:
+https://docs.google.com/forms/d/e/1FAIpQLSc6ssRIzOK_OLrFeI7ciyC05BJAn3OcYMowNAyl0zWaQfkckQ/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en
+Forms not supported
+
+Redirecting URL:
+https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfNWM0cTliaGdw&hl=en => https://docs.google.com/document/d/1OI2lQ_FPUpnXD4i3sBLgzvgyOV9l43gKL0JM83co7iI/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1Fd8ptm8-YndnMs3kLoCuEsA14cTxLYUz8t-rgFSC0lM/edit# => https://docs.google.com/document/d/1Fd8ptm8-YndnMs3kLoCuEsA14cTxLYUz8t-rgFSC0lM/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1u4SF3ZU20zl2eyuXzJuhPgj7eXkVaM6rmqB63y6vKPM/edit?pref=2&pli=1# => https://docs.google.com/document/d/1u4SF3ZU20zl2eyuXzJuhPgj7eXkVaM6rmqB63y6vKPM/edit?pref=2&pli=1
+
+Redirecting URL:
+https://docs.google.com/document/d/1oRoaIVTmDH7k6tVbTdXzuw-dYTPkdRo57NYB5Wv7vJo/edit# => https://docs.google.com/document/d/1oRoaIVTmDH7k6tVbTdXzuw-dYTPkdRo57NYB5Wv7vJo/edit
+
+Exception for URL request:
+https://docs.google.com/document/d/13IZTV59ItNsK63RHQo2XGkjMKiU8LfRu5PCaE3R5lco/edit?pli=1
+HTTP Error 410: Gone
+
+Redirecting URL:
+https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfMTFmNXdwM2ZjeA&hl=en => https://docs.google.com/document/d/1xjPIOH8F8a0l74BdDF7Q23nCfZ-YX68Xr6JmmtznMw4/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1KgO1UWFOmRFR7nHSs2SFuzTNFkR3wUWMcDlKeN9_Y_8/edit# => https://docs.google.com/document/d/1KgO1UWFOmRFR7nHSs2SFuzTNFkR3wUWMcDlKeN9_Y_8/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1mR2SAPeQg6HYo6nnMkd1GEA4CPXpJhZWe5bxsDU9wpQ/edit# => https://docs.google.com/document/d/1mR2SAPeQg6HYo6nnMkd1GEA4CPXpJhZWe5bxsDU9wpQ/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/1YVapC-VhuKDQ5vx4T2go8v4HdY6vX7U_FUA-IEn_yrM/edit# => https://docs.google.com/document/d/1YVapC-VhuKDQ5vx4T2go8v4HdY6vX7U_FUA-IEn_yrM/edit
+
+Redirecting URL:
+https://drive.google.com/open?id=1lCZ7iUiu4nsoD-cyoB-DLycQG0AjDM23 => https://drive.google.com/file/d/1lCZ7iUiu4nsoD-cyoB-DLycQG0AjDM23/view?usp=drive_open
+
+Redirecting URL:
+https://docs.google.com/document/d/18e-YK0ailfgLQke7ej_FTs9aHz05cPHOmyxki2Ewm2Q/edit# => https://docs.google.com/document/d/18e-YK0ailfgLQke7ej_FTs9aHz05cPHOmyxki2Ewm2Q/edit
+
+Redirecting URL:
+https://docs.google.com/document/d/16dZ5SBQMS1Yi6531tXOkKE_rmXEwn4VFacOEQKiHA5E/edit?pli=1# => https://docs.google.com/document/d/16dZ5SBQMS1Yi6531tXOkKE_rmXEwn4VFacOEQKiHA5E/edit?pli=1
+
+Redirecting URL:
+https://docs.google.com/document/d/1n7D4Y_W6jzhVYi2UzJqRArsyb7k6Y_i4Jm_uojDuiII/edit# => https://docs.google.com/document/d/1n7D4Y_W6jzhVYi2UzJqRArsyb7k6Y_i4Jm_uojDuiII/edit
+
+Redirecting URL:
+https://docs.google.com/spreadsheet/ccc?key=0Agyi5tgUTatCdHFjS05Kb18xVGd2bTZhak5YaGQtMFE#gid=3 => https://docs.google.com/spreadsheets/d/1E2-s8weiulPoBQjdI05LBzOUToyoZIdSsLKxHAvf8F8/edit
+
+Exception for URL request:
+https://docs.google.com/document/d/1dCrQZIdtOEkKUZCC_lGgucgHSghCHysg6N0pAOi1vaY/edit?pli=1
+HTTP Error 410: Gone
+
+Exception for file ID:
+1aAX0IU_93HEYt6YC1HsfYZ_VtEHKaVs9rbXcmY7WJto
+'exportLinks'
+
+Exception for file ID:
+1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA?alt=json returned "File not found: 1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA.". Details: "File not found: 1im9-alhmNPAIQknkclrrhLupSFb6vmMNnQmW8BuORBA.">
+
+Exception for file ID:
+1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg?alt=json returned "File not found: 1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg.". Details: "File not found: 1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg.">
+
+Exception for file ID:
+1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q
+<HttpError 404 when requesting https://www.googleapis.com/drive/v3/files/1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q?alt=json returned "File not found: 1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q.". Details: "File not found: 1jkc2rDCkW5pVGB2px89SAHcKzAuDi79_dVuIQ2xxf9Q.">
