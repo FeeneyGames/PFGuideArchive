@@ -35,7 +35,7 @@ for url in docs_urls:
     try:
         file_id = d_downloader.url_to_file_id(url)
         if file_id not in docs_file_ids:
-            docs_file_ids += [d_downloader.url_to_file_id(url)]
+            docs_file_ids += [file_id]
     except Exception as e:
         print_exception("Exception for URL:", url, e)
 # download documents
