@@ -41,9 +41,11 @@ class DriveDownloader():
             file_path = "archive/" + file_name + file_ext
         else:
             file_path = "archive/" + file_name
-        # get rid of trailing white space for ZIP files (causes issues when extracting)
+        # get rid of invalid trailing characters for ZIP files (causes issues when extracting)
         if file_path[-4:] == ".zip":
-            file_path = file_path[:-4].rstrip() + ".zip"
+            invalid_chars = [" ", "."]
+            while file_path[-5] in invalid_chars:
+                file_path = file_path[:-5] + ".zip"
         # download and write file if not archived already or if updating archive
         if not os.path.exists(file_path) or update_archive:
             file_buffer, _ = self.download_doc(file_id, download_type)
@@ -166,8 +168,8 @@ class DriveDownloader():
         if not (url.startswith("https://docs.google.com") or
                 url.startswith("https://drive.google.com")):
             raise ValueError("Unexpected URL domain")
-        if url.startswith("https://docs.google.com/spreadsheet/"):
-            raise ValueError("Spreadsheets not yet handled")
+        if url.startswith("https://docs.google.com/forms/"):
+            raise ValueError("Forms not supported")
         file_id = None
         if "/d/" in url:
             start_ind = url.find("/d/")

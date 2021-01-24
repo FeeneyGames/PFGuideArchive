@@ -1,8 +1,17 @@
 import os
+from urllib.request import urlopen
 import zipfile
 
 from gdrive import DriveDownloader
 from zenith import ZenithParser
+
+
+# print exceptions nicely
+def print_exception(msg, identifier, exception):
+    print(msg + "\n" + identifier)
+    print(exception)
+    print()
+
 
 # give Google API credentials to DriveDownloader
 CRED_PATH = "pathfinderguidesguide-ace77dd25e21.json"
@@ -14,19 +23,27 @@ docs_urls = z_parser.get_docs_urls()
 docs_file_ids = []
 for url in docs_urls:
     try:
+        response = urlopen(url)
+        redirect_url = response.url
+        if redirect_url != url:
+            print("Redirecting URL:")
+            print(url + " => " + redirect_url + "\n")
+            url = redirect_url
+    except Exception as e:
+        print_exception("Exception for URL request:", url, e)
+        continue
+    try:
         file_id = d_downloader.url_to_file_id(url)
         if file_id not in docs_file_ids:
             docs_file_ids += [d_downloader.url_to_file_id(url)]
     except Exception as e:
-        print("Exception for URL:\n" + url)
-        print(e)
+        print_exception("Exception for URL:", url, e)
 # download documents
 for file_id in docs_file_ids:
     try:
         d_downloader.save_doc(file_id)
     except Exception as e:
-        print("Exception for file ID:\n" + file_id)
-        print(e)
+        print_exception("Exception for file ID:", file_id, e)
 # extract zips
 archive_dir = "archive"
 zip_files = [file_name for file_name in os.listdir(archive_dir)
