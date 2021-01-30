@@ -9,6 +9,7 @@ google-auth-httplib2 = "*"
 google-auth-oauthlib = "*"
 oauth2client = "*"
 beautifulsoup4 = "*"
+pywebcopy = "*"
 
 [dev-packages]
 flake8 = "*"
