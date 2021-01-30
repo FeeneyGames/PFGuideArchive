@@ -20,19 +20,26 @@ d_downloader = DriveDownloader(CRED_PATH)
 z_parser = ZenithParser()
 docs_urls = z_parser.get_docs_urls()
 # get file IDs
+visited_urls = []
 docs_file_ids = []
 for url in docs_urls:
     try:
+        # update url if it redirects
         response = urlopen(url)
         redirect_url = response.url
         if redirect_url != url:
             print("Redirecting URL:")
             print(url + " => " + redirect_url + "\n")
             url = redirect_url
+        # skip redundant urls
+        if url in visited_urls:
+            continue
     except Exception as e:
         print_exception("Exception for URL request:", url, e)
         continue
     try:
+        # get the docs file id for export
+        visited_urls += [url]
         file_id = d_downloader.url_to_file_id(url)
         if file_id not in docs_file_ids:
             docs_file_ids += [file_id]

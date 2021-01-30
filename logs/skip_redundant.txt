@@ -47,10 +47,6 @@ https://docs.google.com/document/d/1unTEBA-yQ5on8JqZlaJlXkpw2j7q0IRxo2upCZizDsI/
 Redirecting URL:
 https://docs.google.com/forms/d/1e1Sm-TxR0RJHm45zz_ZCgArDBg5S4rtozMdbSQfhTvc/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en => https://docs.google.com/forms/d/e/1FAIpQLSc6ssRIzOK_OLrFeI7ciyC05BJAn3OcYMowNAyl0zWaQfkckQ/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en
 
-Exception for URL:
-https://docs.google.com/forms/d/e/1FAIpQLSc6ssRIzOK_OLrFeI7ciyC05BJAn3OcYMowNAyl0zWaQfkckQ/viewform?key=0Atvv1a7v3y5BdEZNaWlQM1MwcTl3ZnFxYjNvdWRsN3c&hl=en
-Forms not supported
-
 Redirecting URL:
 https://docs.google.com/Doc?docid=0AcNyxDTKvAmqZGRtZzhzdjZfNWM0cTliaGdw&hl=en => https://docs.google.com/document/d/1OI2lQ_FPUpnXD4i3sBLgzvgyOV9l43gKL0JM83co7iI/edit
 
@@ -62,6 +58,10 @@ https://docs.google.com/document/d/1u4SF3ZU20zl2eyuXzJuhPgj7eXkVaM6rmqB63y6vKPM/
 
 Redirecting URL:
 https://docs.google.com/document/d/1oRoaIVTmDH7k6tVbTdXzuw-dYTPkdRo57NYB5Wv7vJo/edit# => https://docs.google.com/document/d/1oRoaIVTmDH7k6tVbTdXzuw-dYTPkdRo57NYB5Wv7vJo/edit
+
+Exception for URL request:
+https://docs.google.com/document/d/18z70ARGsGF92VbV0Ithx_4PpwTQXDqUw0Ph1UvqLfVU/edit
+HTTP Error 403: Forbidden
 
 Exception for URL request:
 https://docs.google.com/document/d/13IZTV59ItNsK63RHQo2XGkjMKiU8LfRu5PCaE3R5lco/edit?pli=1
