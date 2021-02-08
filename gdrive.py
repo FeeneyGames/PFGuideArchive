@@ -1,9 +1,13 @@
 import io
 import os
+from urllib.request import urlopen
+import zipfile
 
 from apiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from oauth2client.service_account import ServiceAccountCredentials
+
+from utils import print_exception
 
 
 class DriveDownloader():
@@ -12,6 +16,28 @@ class DriveDownloader():
 
         creds = ServiceAccountCredentials.from_json_keyfile_name(cred_json_path, SCOPES)
         self.service = build("drive", "v3", credentials=creds)
+
+    def archive_urls(self, docs_urls, update_archive=False):
+        """Archive Docs from their URLs
+
+        Args:
+            docs_urls (list): List of URLs to Google Docs
+            update_archive (bool, optional): Whether to redownload and update archived Docs.
+                                             Defaults to False.
+        """
+        # get file IDs
+        docs_file_ids = self.get_doc_ids(docs_urls)
+        # download documents
+        for file_id in docs_file_ids:
+            self.save_doc(file_id, update_archive=update_archive)
+        # extract zips
+        archive_dir = "archive"
+        zip_files = [file_name for file_name in os.listdir(archive_dir)
+                     if os.path.isfile(os.path.join(archive_dir, file_name))
+                     and file_name[-4:] == ".zip"]
+        for file_name in zip_files:
+            with zipfile.ZipFile(os.path.join(archive_dir, file_name), "r") as zip_f:
+                zip_f.extractall(os.path.join(archive_dir, file_name[:-4]))
 
     def save_doc(self, file_id, update_archive=False):
         """Save document in archive
@@ -24,33 +50,36 @@ class DriveDownloader():
         Raises:
             ValueError: File with unhandled type.
         """
-        # get name and download type from Docs
-        file_name = self.sanitize_name(self.get_doc_name(file_id))
-        download_type = self.get_download_type(file_id)
-        # map Docs file type to proper file extension
-        type_to_extension = {
-            "application/pdf": ".pdf",
-            "application/zip": ".zip",
-            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ".xlsx"
-        }
-        if download_type not in type_to_extension:
-            raise ValueError("File with unhandled type:\n" + download_type)
-        file_ext = type_to_extension[download_type]
-        # create file path without duplicate extensions
-        if file_name[-len(file_ext):] != file_ext:
-            file_path = "archive/" + file_name + file_ext
-        else:
-            file_path = "archive/" + file_name
-        # get rid of invalid trailing characters for ZIP files (causes issues when extracting)
-        if file_path[-4:] == ".zip":
-            invalid_chars = [" ", "."]
-            while file_path[-5] in invalid_chars:
-                file_path = file_path[:-5] + ".zip"
-        # download and write file if not archived already or if updating archive
-        if not os.path.exists(file_path) or update_archive:
-            file_buffer, _ = self.download_doc(file_id, download_type)
-            with open(file_path, "wb") as f:
-                f.write(file_buffer.getbuffer())
+        try:
+            # get name and download type from Docs
+            file_name = self.sanitize_name(self.get_doc_name(file_id))
+            download_type = self.get_download_type(file_id)
+            # map Docs file type to proper file extension
+            type_to_extension = {
+                "application/pdf": ".pdf",
+                "application/zip": ".zip",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ".xlsx"
+            }
+            if download_type not in type_to_extension:
+                raise ValueError("File with unhandled type:\n" + download_type)
+            file_ext = type_to_extension[download_type]
+            # create file path without duplicate extensions
+            if file_name[-len(file_ext):] != file_ext:
+                file_path = "archive/" + file_name + file_ext
+            else:
+                file_path = "archive/" + file_name
+            # get rid of invalid trailing characters for ZIP files (causes issues when extracting)
+            if file_path[-4:] == ".zip":
+                invalid_chars = [" ", "."]
+                while file_path[-5] in invalid_chars:
+                    file_path = file_path[:-5] + ".zip"
+            # download and write file if not archived already or if updating archive
+            if not os.path.exists(file_path) or update_archive:
+                file_buffer, _ = self.download_doc(file_id, download_type)
+                with open(file_path, "wb") as f:
+                    f.write(file_buffer.getbuffer())
+        except Exception as e:
+            print_exception("Exception for file ID:", file_id, e)
 
     def download_doc(self, file_id, download_type=None):
         """Download a Google Doc from the file id
@@ -103,6 +132,42 @@ class DriveDownloader():
         else:
             raise ValueError("Unexpected download type:\n" + download_type)
         return request
+
+    def get_doc_ids(self, docs_urls):
+        """Gets Docs IDs needed for API calls
+
+        Args:
+            docs_urls (list): URLs linking or redirecting to Docs files
+
+        Returns:
+            list: List of Docs IDs
+        """
+        visited_urls = []
+        docs_file_ids = []
+        for url in docs_urls:
+            try:
+                # update url if it redirects
+                response = urlopen(url)
+                redirect_url = response.url
+                if redirect_url != url:
+                    print("Redirecting URL:")
+                    print(url + " => " + redirect_url + "\n")
+                    url = redirect_url
+                # skip redundant urls
+                if url in visited_urls:
+                    continue
+            except Exception as e:
+                print_exception("Exception for URL request:", url, e)
+                continue
+            try:
+                # get the docs file id for export
+                visited_urls += [url]
+                file_id = self.url_to_file_id(url)
+                if file_id not in docs_file_ids:
+                    docs_file_ids += [file_id]
+            except Exception as e:
+                print_exception("Exception for URL:", url, e)
+        return docs_file_ids
 
     def get_doc_metadata(self, file_id):
         """Gets default Docs metadata fields
