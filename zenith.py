@@ -17,12 +17,15 @@ class ZenithParser():
         """Get Google Docs URLs linked in the HTML
 
         Returns:
-            list: List of Google Docs URLs
+            (list, list): List of Google Docs URLs
+                          List of labels given to the links
         """
         docs_urls = []
+        link_labels = []
         for tag in self.post_div.find_all("a"):
             url = tag["href"]
             if url.startswith("https://docs.google.com") or \
                url.startswith("https://drive.google.com"):
                 docs_urls += [url]
-        return docs_urls
+                link_labels += [tag.text]
+        return docs_urls, link_labels

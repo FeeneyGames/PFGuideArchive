@@ -24,20 +24,29 @@ class DriveDownloader():
             docs_urls (list): List of URLs to Google Docs
             update_archive (bool, optional): Whether to redownload and update archived Docs.
                                              Defaults to False.
+
+        Returns:
+            (list, list): List of archive paths
+                          List of failed urls
         """
         # get file IDs
-        docs_file_ids = self.get_doc_ids(docs_urls)
+        docs_file_ids, fail_urls = self.get_doc_ids(docs_urls)
         # download documents
         for file_id in docs_file_ids:
             self.save_doc(file_id, update_archive=update_archive)
-        # extract zips
+        # get list of downloaded zips
         archive_dir = "archive"
         zip_files = [file_name for file_name in os.listdir(archive_dir)
                      if os.path.isfile(os.path.join(archive_dir, file_name))
                      and file_name[-4:] == ".zip"]
+        # extract zips
+        archive_paths = []
         for file_name in zip_files:
+            archive_path = os.path.join(archive_dir, file_name[:-4])
+            archive_paths += [archive_path]
             with zipfile.ZipFile(os.path.join(archive_dir, file_name), "r") as zip_f:
-                zip_f.extractall(os.path.join(archive_dir, file_name[:-4]))
+                zip_f.extractall(archive_path)
+        return archive_paths, fail_urls
 
     def save_doc(self, file_id, update_archive=False):
         """Save document in archive
@@ -140,10 +149,12 @@ class DriveDownloader():
             docs_urls (list): URLs linking or redirecting to Docs files
 
         Returns:
-            list: List of Docs IDs
+            (list, list): List of Docs IDs
+                          List of failed urls
         """
         visited_urls = []
         docs_file_ids = []
+        failed_urls = []
         for url in docs_urls:
             try:
                 # update url if it redirects
@@ -152,22 +163,23 @@ class DriveDownloader():
                 if redirect_url != url:
                     print("Redirecting URL:")
                     print(url + " => " + redirect_url + "\n")
-                    url = redirect_url
                 # skip redundant urls
-                if url in visited_urls:
+                if redirect_url in visited_urls:
                     continue
             except Exception as e:
+                failed_urls += [url]
                 print_exception("Exception for URL request:", url, e)
                 continue
             try:
                 # get the docs file id for export
-                visited_urls += [url]
-                file_id = self.url_to_file_id(url)
+                visited_urls += [redirect_url]
+                file_id = self.url_to_file_id(redirect_url)
                 if file_id not in docs_file_ids:
                     docs_file_ids += [file_id]
             except Exception as e:
-                print_exception("Exception for URL:", url, e)
-        return docs_file_ids
+                failed_urls += [url]
+                print_exception("Exception for URL:", redirect_url, e)
+        return docs_file_ids, failed_urls
 
     def get_doc_metadata(self, file_id):
         """Gets default Docs metadata fields
