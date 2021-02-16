@@ -1,5 +1,6 @@
 import io
 import os
+from multiprocessing.dummy import Pool
 from urllib.request import urlopen
 import zipfile
 
@@ -17,6 +18,9 @@ class DriveDownloader():
         creds = ServiceAccountCredentials.from_json_keyfile_name(cred_json_path, SCOPES)
         self.service = build("drive", "v3", credentials=creds)
 
+        # number of threads to use when multithreading
+        self.num_threads = 4
+
     def archive_urls(self, docs_urls, update_archive=False):
         """Archive Docs from their URLs
 
@@ -26,27 +30,27 @@ class DriveDownloader():
                                              Defaults to False.
 
         Returns:
-            (list, list): List of archive paths
-                          List of failed urls
+            list: List of archive paths or None
         """
         # get file IDs
-        docs_file_ids, fail_urls = self.get_doc_ids(docs_urls)
+        docs_file_ids = self.get_doc_ids(docs_urls)
         # download documents
-        for file_id in docs_file_ids:
-            self.save_doc(file_id, update_archive=update_archive)
-        # get list of downloaded zips
-        archive_dir = "archive"
-        zip_files = [file_name for file_name in os.listdir(archive_dir)
-                     if os.path.isfile(os.path.join(archive_dir, file_name))
-                     and file_name[-4:] == ".zip"]
+        file_paths = self.save_docs(docs_file_ids, update_archive=update_archive)
         # extract zips
-        archive_paths = []
-        for file_name in zip_files:
-            archive_path = os.path.join(archive_dir, file_name[:-4])
-            archive_paths += [archive_path]
-            with zipfile.ZipFile(os.path.join(archive_dir, file_name), "r") as zip_f:
-                zip_f.extractall(archive_path)
-        return archive_paths, fail_urls
+        for i, file_path in enumerate(file_paths):
+            if file_path is not None and file_path[-4:] == ".zip":
+                with zipfile.ZipFile(file_path, "r") as zip_f:
+                    folder_path = file_path[:-4]
+                    zip_f.extractall(folder_path)
+                    # change filepath to the html file
+                    html_file_name = None
+                    for zip_info in zip_f.filelist:
+                        file_name = zip_info.filename
+                        if len(file_name) > 5 and file_name[-5:] == ".html":
+                            html_file_name = file_name
+                            break
+                    file_paths[i] = os.path.join(folder_path, html_file_name)
+        return file_paths
 
     def save_doc(self, file_id, update_archive=False):
         """Save document in archive
@@ -55,10 +59,10 @@ class DriveDownloader():
             file_id (str): ID for the Google Doc
             update_archive (bool, optional): Whether to redownload and update archived Docs.
                                              Defaults to False.
-
-        Raises:
-            ValueError: File with unhandled type.
         """
+        if file_id is None:
+            return None
+        file_path = None
         try:
             # get name and download type from Docs
             file_name = self.sanitize_name(self.get_doc_name(file_id))
@@ -89,6 +93,20 @@ class DriveDownloader():
                     f.write(file_buffer.getbuffer())
         except Exception as e:
             print_exception("Exception for file ID:", file_id, e)
+            file_path = None
+        return file_path
+
+    def save_docs(self, file_ids, update_archive=False):
+        """Save document in archive
+
+        Args:
+            file_ids (str): List of IDs for the Google Docs or None
+            update_archive (bool, optional): Whether to redownload and update archived Docs.
+                                             Defaults to False.
+        """
+        # process downloads
+        file_paths = [self.save_doc(file_id, update_archive) for file_id in file_ids]
+        return file_paths
 
     def download_doc(self, file_id, download_type=None):
         """Download a Google Doc from the file id
@@ -142,6 +160,27 @@ class DriveDownloader():
             raise ValueError("Unexpected download type:\n" + download_type)
         return request
 
+    def get_doc_id(self, docs_url):
+        docs_file_id = None
+        redirect_url = None
+        try:
+            # update url if it redirects
+            response = urlopen(docs_url)
+            redirect_url = response.url
+            if redirect_url != docs_url:
+                print("Redirecting URL:")
+                print(docs_url + " => " + redirect_url + "\n")
+        except Exception as e:
+            print_exception("Exception for URL request:", docs_url, e)
+        if redirect_url is not None:
+            try:
+                # get the docs file id for export
+                file_id = self.url_to_file_id(redirect_url)
+                docs_file_id = file_id
+            except Exception as e:
+                print_exception("Exception for URL:", redirect_url, e)
+        return docs_file_id
+
     def get_doc_ids(self, docs_urls):
         """Gets Docs IDs needed for API calls
 
@@ -152,34 +191,12 @@ class DriveDownloader():
             (list, list): List of Docs IDs
                           List of failed urls
         """
-        visited_urls = []
-        docs_file_ids = []
-        failed_urls = []
-        for url in docs_urls:
-            try:
-                # update url if it redirects
-                response = urlopen(url)
-                redirect_url = response.url
-                if redirect_url != url:
-                    print("Redirecting URL:")
-                    print(url + " => " + redirect_url + "\n")
-                # skip redundant urls
-                if redirect_url in visited_urls:
-                    continue
-            except Exception as e:
-                failed_urls += [url]
-                print_exception("Exception for URL request:", url, e)
-                continue
-            try:
-                # get the docs file id for export
-                visited_urls += [redirect_url]
-                file_id = self.url_to_file_id(redirect_url)
-                if file_id not in docs_file_ids:
-                    docs_file_ids += [file_id]
-            except Exception as e:
-                failed_urls += [url]
-                print_exception("Exception for URL:", redirect_url, e)
-        return docs_file_ids, failed_urls
+        # process Docs IDs on multiple threads
+        thread_pool = Pool(self.num_threads)
+        docs_file_ids = thread_pool.map(self.get_doc_id, docs_urls)
+        # close threads, but don't bother waiting for them to free resources
+        thread_pool.close()
+        return docs_file_ids
 
     def get_doc_metadata(self, file_id):
         """Gets default Docs metadata fields

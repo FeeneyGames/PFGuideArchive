@@ -10,7 +10,6 @@ d_downloader = DriveDownloader(CRED_PATH)
 z_parser = ZenithParser()
 docs_urls, link_labels = z_parser.get_docs_urls()
 # archive Google Docs
-archive_paths, fail_urls = d_downloader.archive_urls(docs_urls)
+archive_paths = d_downloader.archive_urls(docs_urls)
 # output metadata in HTML
-# TODO fix archive errors
-# archive_links(docs_urls, link_labels, archive_paths, fail_urls)
+archive_links(link_labels, archive_paths)
