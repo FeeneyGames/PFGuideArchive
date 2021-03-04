@@ -18,5 +18,5 @@ def archive_links(link_labels, archive_paths):
         html_tag.append(link_tag)
         html_tag.append(soup.new_tag("br"))
     html = soup.prettify()
-    with open("metadata/archive_links.html", "w", encoding="utf-8") as f:
+    with open("archive_links.html", "w", encoding="utf-8") as f:
         f.write(html)
