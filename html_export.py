@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-def archive_links(link_labels, archive_paths):
+def archive_links(link_labels, link_classes, archive_paths):
     # create an empty HTML page
     html_str = """
     <!doctype html>
@@ -15,6 +15,7 @@ def archive_links(link_labels, archive_paths):
             continue
         link_tag = soup.new_tag("a", href=archive_path)
         link_tag.string = link_labels[i]
+        link_tag["class"] = link_classes[i]
         html_tag.append(link_tag)
         html_tag.append(soup.new_tag("br"))
     html = soup.prettify()

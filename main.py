@@ -13,5 +13,13 @@ urls, link_labels, link_classes = z_parser.get_guide_urls()
 docs_urls, docs_link_labels = z_parser.get_docs_urls()
 # archive Google Docs
 docs_archive_paths = d_downloader.archive_urls(docs_urls)
+# combine archive paths into single list
+archive_paths = [None for _ in range(len(urls))]
+for i, url in enumerate(urls):
+    try:
+        index = docs_urls.index(url)
+        archive_paths[i] = docs_archive_paths[index]
+    except ValueError:
+        pass
 # output metadata in HTML
-archive_links(docs_link_labels, docs_archive_paths)
+archive_links(link_labels, link_classes, archive_paths)
