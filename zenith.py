@@ -88,18 +88,18 @@ class_to_url = {
     "barbarian": "http://www.giantitp.com/forums/showthread.php?p=12732426#post12732426",
     "bard": "https://docs.google.com/document/d/1ogz8HL6GeguT-tN3-6HxXiF_G7mg_tyAQ59V9kPg6g4/edit?pli=1",  # noqa: E501
     "bloodrager": "https://docs.google.com/document/d/1uV52XseHRUMKOM-fLF6oXwkF-bcmmPk93XR8u02-sYw/edit",  # noqa: E501
-    "brawler": "http://paizo.com/threads/rzs2rn5i?Happy-Feet-Wombo-Combo-A-guide-to-getting",
+    "brawler": "https://docs.google.com/document/d/1NHhkx9fkI00i2_p8WxtWlEGPRdK4L4qVlkJ-JrHxmy8/edit",
     "cavalier": "https://docs.google.com/document/d/1uuAB8SfE5ssZLYwa1LuQQ4haz1tD1q28Iyl8XAdMNxY/edit?hl=en_US",  # noqa: E501
     "cleric": "https://docs.google.com/document/d/1h6-_4HvPvV-Tt7I67Gi_oPhgHmeDVA5SBl-WrJSgf5s/edit?hl=en#",  # noqa: E501
     "druid": "https://docs.google.com/document/pub?id=1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg",
     "fighter": "https://docs.google.com/document/d/178CAoRPv-ST4ntUWwDFmkX5mi5Tm3pB1MGtoLXpG1D4/edit",  # noqa: E501
     "gunslinger": "http://paizo.com/threads/rzs2modi?DrakeRockets-Guide-to-Grand-Gunslinginger#1",
-    "hunter": "http://paizo.com/threads/rzs2u0vl?Working-on-a-guide-to-the-HUNTER-base-class",
+    "hunter": "https://docs.google.com/document/d/1q_pvY7jaFKbaVMModt2vLV_NCal8txJxbVbsXl7hDCc/edit?pli=1",
     "inquisitor": "https://drive.google.com/file/d/0B9vv1a7v3y5BLTlQVlZ6TDI0RTg/view",
-    "investigator": "https://www.reddit.com/r/Pathfinder_RPG/comments/he18bp/the_investigators_academy_a_new_guide_to_the/",  # noqa: E501
-    "kineticist": "http://paizo.com/threads/rzs2su6f?Mastering-the-Elements-N-Jollys-guide-to-the",
-    "magus": "https://docs.google.com/document/d/1fSJuL1O4hs15NMk-y4MXbH9D_qt9V7iwhY2y9HDrs74/edit",
-    "medium": "http://www.giantitp.com/forums/showthread.php?454839-CTP-s-Medium-Guide",
+    "investigator": "https://docs.google.com/document/d/1tpOQy_vA7SiaeU-YV5NnHJwVHpy-L9Spt-9RNYu-gSg/edit",  # noqa: E501
+    "kineticist": "https://docs.google.com/document/d/1utgJVtJStEtZ8B923VWFYKIx6kbWQS_44zSMOb8rkT0/edit",
+    "magus": "http://zenithgames.blogspot.com/2015/09/optimizing-suboptimal-subguide-to.html",
+    "medium": "https://docs.google.com/document/d/18513dKdB74fbtloy7cKgCtJkHEsTrAa3SsS56LguMqQ/edit",
     "mesmerist": "https://docs.google.com/document/d/1vGa7fsHbvWNTgPlKlEBJfRYE_vHNKt7dpJHUwiAv4f0/edit",  # noqa: E501
     "monk": "http://paizo.com/threads/rzs2nix8?Zen-and-the-Art-of-Monk-Maintenance-A-Guide#1",
     "monk-unchained": "https://docs.google.com/document/d/1vtxGT6RArwUBqSMTco-ekm9azMXWGox9tTD6Wp3rYTE/edit",  # noqa: E501
@@ -107,23 +107,23 @@ class_to_url = {
     "occultist": "http://www.thedicedecide.com/mack-blog/of-wands-cups-and-blades-a-guide-to-the-pathfinder-occultist/",  # noqa: E501
     "oracle": "https://docs.google.com/document/d/1WdtrZCESRmVfljXY196wMrMLTnS8Uzk4DEk3oQdVZok/edit?hl=en_US",  # noqa: E501
     "paladin": "https://drive.google.com/file/d/0B9vv1a7v3y5BZjJSaU5wY3NvdEk/view",
-    "psychic": "https://docs.google.com/document/d/1JRq3ywFhF3BsJH1tTj5JgRhN2gvwiyUaLUgvDYv-gCI/edit?copiedFromTrash",  # noqa: E501
+    "psychic": "https://docs.google.com/document/d/19ucZQWoJVw02H_7uyEeGrex4A-MgVRzfz1f-yUjG9uQ/edit",  # noqa: E501
     "ranger": "https://docs.google.com/document/d/1JRq3ywFhF3BsJH1tTj5JgRhN2gvwiyUaLUgvDYv-gCI/edit?copiedFromTrash",  # noqa: E501
-    "rogue": "http://paizo.com/threads/rzs2qw2l?Moxie-A-Practical-Guide-to-Roguing-with-Style",
-    "rogue-unchained": "https://docs.google.com/document/d/1zLDFgiwZt_vPVlOcgR7QDAvskcH34uG1FuKPXTnpuEg/view",  # noqa: E501
+    "rogue": "http://zenithgames.blogspot.com/2015/10/moxie-practical-guide-to-roguing-with.html",
+    "rogue-unchained": "http://www.giantitp.com/forums/showthread.php?420875-CTP-s-Unchained-Rogue-Mini-Guide",  # noqa: E501
     "samurai": "https://docs.google.com/document/d/1gD4kwJXJPMUDGuKsvYiL03ACj-ZqiwDcMrkHtV9mmKI/edit",  # noqa: E501
-    "shaman": "http://paizo.com/threads/rzs2rlmn?The-Seers-Catalog",
-    "shifter": "http://paizo.com/threads/rzs2uuj6?Archmage-Variels-Guide-to-the-Shifter",
-    "skald": "http://paizo.com/threads/rzs2rloh?Pseudoguide-to-the-Skald-or-How-to-be-Metal",
-    "slayer": "http://paizo.com/threads/rzs2s91q?A-Study-of-Slayers-A-Class-Guide",
+    "shaman": "https://docs.google.com/document/d/1Z7WB_ZPHgCs1tXht_QLKmCxLlpp8ku-dZrJ_Mx06kAo/edit",
+    "shifter": "https://docs.google.com/document/d/1uhp5v8_tu_rLMX4T266g4rh-ceu_u-8kCZHjFFNHJcY/edit",
+    "skald": "https://docs.google.com/document/d/1lHp_ioueUwkoZzxBKYg4ha3uVV07K8RNngL4J5EqtYU/edit",
+    "slayer": "https://docs.google.com/document/d/18YaguqQNVrlfXQ_5NgF82Vka66Epyqb2tYVC0GqHhGk/pub",
     "sorcerer": "http://zenithgames.blogspot.com/2017/11/inner-power-guide-to-sorcerer.html",
-    "spiritualist": "http://www.giantitp.com/forums/showthread.php?t=184592",
-    "summoner": "http://www.giantitp.com/forums/showthread.php?t=184592",
-    "summoner-unchained": "http://paizo.com/threads/rzs2s8ur?Unchained-Summoner-Guide#1",
-    "swashbuckler": "http://paizo.com/threads/rzs2rk3q?A-Guide-To-The-Swashbuckler",
-    "vampire-hunter": "http://paizo.com/threads/rzs2tn7y?I-Am-Vengeance-I-am-the-Night-FedoraFerrets",  # noqa: E501
-    "vigilante": "http://paizo.com/threads/rzs2tn7y?I-Am-Vengeance-I-am-the-Night-FedoraFerrets",
-    "warpriest": "http://paizo.com/threads/rzs2tbb4?Piercing-the-Heavens-N-Jollys-guide-to-the#1",
+    "spiritualist": "https://docs.google.com/document/d/1u4SF3ZU20zl2eyuXzJuhPgj7eXkVaM6rmqB63y6vKPM/edit?pref=2&pli=1#",
+    "summoner": "https://docs.google.com/document/d/1oRoaIVTmDH7k6tVbTdXzuw-dYTPkdRo57NYB5Wv7vJo/edit#",
+    "summoner-unchained": "https://docs.google.com/document/d/1flEJrpr3VIkc09cH_ZofizK_9Dy90YNR3VWC_rIRtJM/edit?pli=1",
+    "swashbuckler": "http://zenithgames.blogspot.com/2017/10/the-dashing-daring-dandys-dragoman-in.html",
+    "vampire-hunter": "https://docs.google.com/document/d/1b7U1lkpvCgSthdyEsxs3Wy0bojZXzN_5OP1OXCPezdI/edit",  # noqa: E501
+    "vigilante": "https://docs.google.com/document/d/18z70ARGsGF92VbV0Ithx_4PpwTQXDqUw0Ph1UvqLfVU/edit",
+    "warpriest": "https://docs.google.com/document/d/1-nEbro_tLQ0ILxUd4vmht46-d6nbLk0RUbSRO5xUgvo/edit",
     "witch": "https://docs.google.com/document/d/1YkARuboGbaCVdOpcgoA0epQFqBlCygzzUsgaBdba9BE/edit",
     "wizard": "https://docs.google.com/document/d/1mmafMuRRd3ubCMhCNmOomLUn_YvaVXiHwSyuC1YDrNc/edit",  # noqa: E501
     "arcane-archer": "http://zenithgames.blogspot.com/2015/03/the-human-diversions-guide-to-caster.html",  # noqa: E501
