@@ -30,6 +30,24 @@ class ZenithParser():
                 link_labels += [tag.text]
         return docs_urls, link_labels
 
+    def get_non_docs_urls(self):
+        """Get non-Docs guide URLs linked in the HTML
+
+        Returns:
+            (list, list): List of non-Docs guide URLs
+                          List of labels given to the links
+        """
+        non_docs_urls = []
+        link_labels = []
+        for tag in self.post_div.find_all("a"):
+            url = tag["href"]
+            if tag.text not in link_label_blacklist and \
+                not (url.startswith("https://docs.google.com") or \
+                     url.startswith("https://drive.google.com")):
+                non_docs_urls += [url]
+                link_labels += [tag.text.strip()]
+        return non_docs_urls, link_labels
+
     def get_guide_urls(self):
         """Get URLs to guides linked in the HTML
 
@@ -193,3 +211,12 @@ class_to_url = {
 url_to_class = {}
 for key, val in class_to_url.items():
     url_to_class[val] = url_to_class.get(val, []) + [key]
+
+link_label_blacklist = [
+    "Discussion",
+    "[Discussion]",
+    "Thread",
+    "We Be Dragons",
+    "Check out the Entire Jacob's Tower\xa0Package\xa0Here",
+    "&dropbox",
+]
