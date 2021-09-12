@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Google API Key
-pathfinderguidesguide-ace77dd25e21.json
+pathfinderguidesguide-*.json
