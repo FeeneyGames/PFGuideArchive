@@ -11,15 +11,15 @@ d_downloader = DriveDownloader(CRED_PATH)
 z_parser = ZenithParser()
 urls, link_labels, link_classes = z_parser.get_guide_urls()
 # get URLs for non-Docs links and archive
-non_docs_urls, non_docs_link_labels = z_parser.get_non_docs_urls()
-non_docs_archive_paths = save_webpages_with_path(non_docs_urls)
+# non_docs_urls, non_docs_link_labels = z_parser.get_non_docs_urls()
+# non_docs_archive_paths = save_webpages_with_path(non_docs_urls)
 # get URLs for Google Docs links and archive
 docs_urls, docs_link_labels = z_parser.get_docs_urls()
 docs_archive_paths = d_downloader.archive_urls(docs_urls)
 # combine archive paths into single list
 archive_paths = [None] * len(urls)
 url_path_lists = [
-    (non_docs_urls, ["#"] * len(non_docs_urls)),
+    # (non_docs_urls, ["#"] * len(non_docs_urls)),
     (docs_urls, docs_archive_paths),
 ]
 for i, url in enumerate(urls):
