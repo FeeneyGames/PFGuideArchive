@@ -5,7 +5,7 @@ from zenith import ZenithParser
 
 
 # give Google API credentials to DriveDownloader
-CRED_PATH = "pathfinderguidesguide-ace77dd25e21.json"
+CRED_PATH = "pathfinderguidesguide-252540c96635.json"
 d_downloader = DriveDownloader(CRED_PATH)
 # get master URL reference
 z_parser = ZenithParser()
