@@ -112,7 +112,7 @@ class_to_url = {
     "druid": "https://docs.google.com/document/pub?id=1Y_uvQ0fgmLR9aW-OoAD_rbI-3iMJVQmxifLpA1s5EXg",
     "fighter": "https://docs.google.com/document/d/178CAoRPv-ST4ntUWwDFmkX5mi5Tm3pB1MGtoLXpG1D4/edit",  # noqa: E501
     "gunslinger": "http://paizo.com/threads/rzs2modi?DrakeRockets-Guide-to-Grand-Gunslinginger#1",
-    "hunter": "https://docs.google.com/document/d/1q_pvY7jaFKbaVMModt2vLV_NCal8txJxbVbsXl7hDCc/edit?pli=1",
+    "hunter": "https://drive.google.com/file/d/0B7y1bJwiGxOQYS1ETlJvWHBua0E/view",
     "inquisitor": "https://drive.google.com/file/d/0B9vv1a7v3y5BLTlQVlZ6TDI0RTg/view",
     "investigator": "https://docs.google.com/document/d/1tpOQy_vA7SiaeU-YV5NnHJwVHpy-L9Spt-9RNYu-gSg/edit",  # noqa: E501
     "kineticist": "https://docs.google.com/document/d/1utgJVtJStEtZ8B923VWFYKIx6kbWQS_44zSMOb8rkT0/edit",
@@ -122,7 +122,7 @@ class_to_url = {
     "monk": "http://paizo.com/threads/rzs2nix8?Zen-and-the-Art-of-Monk-Maintenance-A-Guide#1",
     "monk-unchained": "https://docs.google.com/document/d/1vtxGT6RArwUBqSMTco-ekm9azMXWGox9tTD6Wp3rYTE/edit",  # noqa: E501
     "ninja": "http://zenithgames.blogspot.com/2014/08/zeniths-guide-to-ninja-part-i.html",
-    "occultist": "http://www.thedicedecide.com/mack-blog/of-wands-cups-and-blades-a-guide-to-the-pathfinder-occultist/",  # noqa: E501
+    "occultist": "https://docs.google.com/document/d/1Trea8XI8StQrhF77jEiaACY7Fve8vqSManBU75FC6hU/edit#",  # noqa: E501
     "oracle": "https://docs.google.com/document/d/1WdtrZCESRmVfljXY196wMrMLTnS8Uzk4DEk3oQdVZok/edit?hl=en_US",  # noqa: E501
     "paladin": "https://drive.google.com/file/d/0B9vv1a7v3y5BZjJSaU5wY3NvdEk/view",
     "psychic": "https://docs.google.com/document/d/19ucZQWoJVw02H_7uyEeGrex4A-MgVRzfz1f-yUjG9uQ/edit",  # noqa: E501
