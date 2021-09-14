@@ -1,5 +1,6 @@
 from html_export import archive_links
 from gdrive import DriveDownloader
+from sitemap import update_sitemap
 from web import save_webpages_with_path
 from zenith import ZenithParser
 
@@ -32,3 +33,5 @@ for i, url in enumerate(urls):
             pass
 # output metadata in HTML
 archive_links(link_labels, link_classes, archive_paths)
+# update the sitemap for search engines
+update_sitemap()

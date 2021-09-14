@@ -8,6 +8,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/ʺBlow them to smithereens!
 https://feeneygames.github.io/PFGuideArchive/archive/Counter Savant։ The Only∗ Pathfinder Counterspelling Build/CounterSavantTheOnlyPathfinderCounterspelling.html
 https://feeneygames.github.io/PFGuideArchive/archive/Bodhi's Guide to the Optimal Paladin and Antipaladin 5.0.pdf
 https://feeneygames.github.io/PFGuideArchive/archive/BARBARIAN AM SMASH - A Practical Guide to Breaking Faces/BARBARIANAMSMASHAPracticalGuidetoBreakingFace.html
+https://feeneygames.github.io/PFGuideArchive/archive/Elewan's Pathfinder Barbarian Guide/Barbarian Guide.docx.html
 https://feeneygames.github.io/PFGuideArchive/archive/How to become the Lord of Rage։ N. Jolly's guide to the Pathfinder Barbarian/HowtobecometheLordofRageN.JollysguidetothePat.html
 https://feeneygames.github.io/PFGuideArchive/archive/Pathfinder Bard Guide/PathfinderBardGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/Treantmonk's Guide to Bards։ Pathfind/TreantmonksGuidetoBardsPathfind....html
@@ -18,6 +19,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/One B.A.M.F's Guide to the 
 https://feeneygames.github.io/PFGuideArchive/archive/Happy Feet, Wombo Combo - A guide to the Brawler/HappyFeetWomboComboAguidetotheBrawler.html
 https://feeneygames.github.io/PFGuideArchive/archive/AGuideToBrawlers.docx/AGuideToBrawlers.docx.html
 https://feeneygames.github.io/PFGuideArchive/archive/The Cavalier's Code։ An Optimization Guide/TheCavaliersCodeAnOptimizationGuide.html
+https://feeneygames.github.io/PFGuideArchive/archive/The Cavalry Has Arrived! Samurai∕Cavalier Guide/TheCavalryHasArrivedSamuraiCavalierGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/Tark's Big Holy Book of Clerical Optimization-Intro and Links/TarksBigHolyBookofClericalOptimizationIntroan.html
 https://feeneygames.github.io/PFGuideArchive/archive/ReachCleric.pdf
 https://feeneygames.github.io/PFGuideArchive/archive/Guide to Dipping Cleric/GuidetoDippingCleric.html
@@ -27,11 +29,14 @@ https://feeneygames.github.io/PFGuideArchive/archive/Analysis Paralysis։ All th
 https://feeneygames.github.io/PFGuideArchive/archive/Druid Handbook Part 1։ The Wild Mystic/DruidHandbookPart1TheWildMystic.html
 https://feeneygames.github.io/PFGuideArchive/archive/Druid Handbook Part 2։ The Spirit of the Beast/DruidHandbookPart2TheSpiritoftheBeast.html
 https://feeneygames.github.io/PFGuideArchive/archive/Druid Handbook Part 3։ Druid spells examined/DruidHandbookPart3Druidspellsexamined.html
+https://feeneygames.github.io/PFGuideArchive/archive/Peterrco's Guide to Druids/Peterrco's Guide to Druids.html
 https://feeneygames.github.io/PFGuideArchive/archive/reincarnated druid handbook/reincarnateddruidhandbook.html
 https://feeneygames.github.io/PFGuideArchive/archive/Druid's Log։ Animal Companions/DruidsLogAnimalCompanions.html
 https://feeneygames.github.io/PFGuideArchive/archive/Prometeus guide to Druid/PrometeusguidetoDruid.html
 https://feeneygames.github.io/PFGuideArchive/archive/Monk Dipping for Pathfinder Druids/MonkDippingforPathfinderDruids.html
+https://feeneygames.github.io/PFGuideArchive/archive/Public Becoming a Force of Nature։ Druid Guide/PublicBecomingaForceofNatureDruidGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/Bladestorm։ Str Ranger's Guide to TWF for Fighters/BladestormStrRangersGuidetoTWFforFighters.html
+https://feeneygames.github.io/PFGuideArchive/archive/RogueEidolon'sGuidetoFighters.pdf
 https://feeneygames.github.io/PFGuideArchive/archive/Two Hands are Better Than One/TwoHandsareBetterThanOne.html
 https://feeneygames.github.io/PFGuideArchive/archive/Secrets of the Swordlords/SecretsoftheSwordlords.html
 https://feeneygames.github.io/PFGuideArchive/archive/Nightbringer’s Guide to the Pathfinder Fighter/NightbringersGuidetothePathfinderFighter.html
@@ -68,6 +73,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/The Beginner's Basics To th
 https://feeneygames.github.io/PFGuideArchive/archive/JAM’s Monk Blended Archetype Guide/JAMsMonkBlendedArchetypeGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/You Are Already Dead։ A guide to the Unchained Monk/YouAreAlreadyDeadAguidetotheUnchainedMonk.html
 https://feeneygames.github.io/PFGuideArchive/archive/Pathfinder Ninja Guide/PathfinderNinjaGuide.html
+https://feeneygames.github.io/PFGuideArchive/archive/The Occultist's Reliquary։ A Guide to the Pathfinder Occultist/TheOccultistsReliquaryAGuidetothePathfinderOc.html
 https://feeneygames.github.io/PFGuideArchive/archive/One Man’s Junk is Another Man’s Power/OneMansJunkisAnotherMansPower.html
 https://feeneygames.github.io/PFGuideArchive/archive/Occultist guide/Occultistguide.html
 https://feeneygames.github.io/PFGuideArchive/archive/Occultist guide to Trappings of the Warrior/OccultistguidetoTrappingsoftheWarrior.html
@@ -75,6 +81,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/Channeling the Cosmos։ A G
 https://feeneygames.github.io/PFGuideArchive/archive/Bell, Book, & Candle։ A Guide to the Pathfinder Oracle/BellBookCandleAGuidetothePathfinderOracle.html
 https://feeneygames.github.io/PFGuideArchive/archive/In Totality։ The Ultimate Guide to Every Cleric, Oracle, and Warpriest Spell in Pathfinder/InTotalityTheUltimateGuidetoEveryClericOracle.html
 https://feeneygames.github.io/PFGuideArchive/archive/Bodhi's Guide to the Optimal Paladin and Antipaladin 5.0.pdf
+https://feeneygames.github.io/PFGuideArchive/archive/Cryptic's Guide to Paladins/CrypticsGuidetoPaladins.html
 https://feeneygames.github.io/PFGuideArchive/archive/Guide to Playing the Paladin/GuidetoPlayingthePaladin.html
 https://feeneygames.github.io/PFGuideArchive/archive/Archer Paladin/ArcherPaladin.html
 https://feeneygames.github.io/PFGuideArchive/archive/The Mini-Guide To The Iroran Paladin/TheMiniGuideToTheIroranPaladin.html
@@ -90,6 +97,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/ʺYou're Such a Sap!ʺ A St
 https://feeneygames.github.io/PFGuideArchive/archive/Forger's List of Awesome Stuff for Rogues/ForgersListofAwesomeStuffforRogues.html
 https://feeneygames.github.io/PFGuideArchive/archive/One Thousand Years of Death A Guide to the Unchained Rogue/OneThousandYearsofDeathAGuidetotheUnchainedRo.html
 https://feeneygames.github.io/PFGuideArchive/archive/Way of the Samurai/WayoftheSamurai.html
+https://feeneygames.github.io/PFGuideArchive/archive/The Cavalry Has Arrived! Samurai∕Cavalier Guide/TheCavalryHasArrivedSamuraiCavalierGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/The Seer's Catalog/TheSeersCatalog.html
 https://feeneygames.github.io/PFGuideArchive/archive/Spiritual Attunement։ A Pathfinder Shaman Guide by JBurz/SpiritualAttunementAPathfinderShamanGuidebyJB.html
 https://feeneygames.github.io/PFGuideArchive/archive/Archmage Variel's Guide to the Shifter/ArchmageVarielsGuidetotheShifter.html
@@ -120,6 +128,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/Hubble, bubble, toil and tr
 https://feeneygames.github.io/PFGuideArchive/archive/patrons.doc/patrons.doc.html
 https://feeneygames.github.io/PFGuideArchive/archive/The Viking Irishman's Witch Guide/TheVikingIrishmansWitchGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/A Guide to the Veneficus Witch/AGuidetotheVeneficusWitch.html
+https://feeneygames.github.io/PFGuideArchive/archive/Owl’s Witch Guide/OwlsWitchGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/The COMPLETE Professor Q Wizard Guide (Zenith Games Copy)/TheCOMPLETEProfessorQWizardGuide_ZenithGamesC.html
 https://feeneygames.github.io/PFGuideArchive/archive/Treantmonk's Guide to Wizards։ Being/TreantmonksGuidetoWizardsBeing....html
 https://feeneygames.github.io/PFGuideArchive/archive/ShakaUVM's Methods for Necromantic Success!/ShakaUVMsMethodsforNecromanticSuccess.html
@@ -128,6 +137,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/The Spellslinger։ A Guide/
 https://feeneygames.github.io/PFGuideArchive/archive/Arcane Apotheosis, the True Wizard, Nethys' Favored/ArcaneApotheosistheTrueWizardNethysFavored.html
 https://feeneygames.github.io/PFGuideArchive/archive/ANGRY WIZARD’S GUIDE TO THE ACG & OTHER Misc. WIZARD SPELLS/ANGRYWIZARDSGUIDETOTHEACGOTHERMisc.WIZARDSPEL.html
 https://feeneygames.github.io/PFGuideArchive/archive/Version 2.1 of Tarondor’s Guide to the Pathfinder Transmuter Wizard/Version2.1ofTarondorsGuidetothePathfinderTran.html
+https://feeneygames.github.io/PFGuideArchive/archive/The Muscle Wizard/TheMuscleWizard.html
 https://feeneygames.github.io/PFGuideArchive/archive/Arcane Trickster.docx/ArcaneTrickster.docx.html
 https://feeneygames.github.io/PFGuideArchive/archive/A Highly Regarded Expert's Guide to the Arcane Trickster/AHighlyRegardedExpertsGuidetotheArcaneTrickst.html
 https://feeneygames.github.io/PFGuideArchive/archive/Williamoaks_Arclord_Guide_V1.pdf
@@ -161,6 +171,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/Mystic Guide/MysticGuide.ht
 https://feeneygames.github.io/PFGuideArchive/archive/Pacting in Pathfinder - The Occultist Handbook/PactinginPathfinderTheOccultistHandbook.html
 https://feeneygames.github.io/PFGuideArchive/archive/Mind Over Everything։ A Pathfinder Psion Handbook/MindOverEverythingAPathfinderPsionHandbook.html
 https://feeneygames.github.io/PFGuideArchive/archive/Psychic Warrior Introduction/PsychicWarriorIntroduction.html
+https://feeneygames.github.io/PFGuideArchive/archive/Memory Muscle։ The Psychic Warrior Handbook/MemoryMuscleThePsychicWarriorHandbook.html
 https://feeneygames.github.io/PFGuideArchive/archive/Risky Business։ A Thaumaturge Handbook (PF, SoP)/RiskyBusinessAThaumaturgeHandbook_PFSoP_.html
 https://feeneygames.github.io/PFGuideArchive/archive/Vizier Guide/VizierGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/[PF] Where the Wilder Things Are։ The Pathfinder Wilder/PFWheretheWilderThingsAreThePathfinderWilder.html
@@ -182,6 +193,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/X Stat to Y Bonus.pdf
 https://feeneygames.github.io/PFGuideArchive/archive/Getting the Most Out of Your Ability Scores։ a Pathfinder 1E Overview (X to Y)/GettingtheMostOutofYourAbilityScoresaPathfind.html
 https://feeneygames.github.io/PFGuideArchive/archive/Categories of Classes/CategoriesofClasses.html
 https://feeneygames.github.io/PFGuideArchive/archive/On Bended Knee։ A Guide to Pathfinder's Obedience Feats/OnBendedKneeAGuidetoPathfindersObedienceFeats.html
+https://feeneygames.github.io/PFGuideArchive/archive/The Class Dip Guide/TheClassDipGuide.html
 https://feeneygames.github.io/PFGuideArchive/archive/Pupsocket’s Guide to the Very Best Traits/PupsocketsGuidetotheVeryBestTraits.html
 https://feeneygames.github.io/PFGuideArchive/archive/A guide to Traits/AguidetoTraits.html
 https://feeneygames.github.io/PFGuideArchive/archive/Optimizing Your Backstory, TheOneHawk's Guide to Traits and Drawbacks/OptimizingYourBackstoryTheOneHawksGuidetoTrai.html
@@ -200,6 +212,7 @@ https://feeneygames.github.io/PFGuideArchive/archive/The Fog Chanter.pdf
 https://feeneygames.github.io/PFGuideArchive/archive/The Long Farewell – A Guide to Poisons in Pathfinder/TheLongFarewellAGuidetoPoisonsinPathfinder.html
 https://feeneygames.github.io/PFGuideArchive/archive/UMD Miniguide/UMDMiniguide.html
 https://feeneygames.github.io/PFGuideArchive/archive/Ultimate Crafter Guide/UltimateCrafterGuide.html
+https://feeneygames.github.io/PFGuideArchive/archive/The Handbook of Hordes/TheHandbookofHordes.html
 https://feeneygames.github.io/PFGuideArchive/archive/Amateur Night - A Guide to Variant Multiclassing/AmateurNightAGuidetoVariantMulticlassing.html
 https://feeneygames.github.io/PFGuideArchive/archive/The ABC's of VMC (Variant Multiclassing)/TheABCsofVMC_VariantMulticlassing_.html
 https://feeneygames.github.io/PFGuideArchive/archive/Article - Ashiel's Adventuring Guidebook.pdf
@@ -233,5 +246,6 @@ https://feeneygames.github.io/PFGuideArchive/archive/Pathfinder Bestiary with St
 https://feeneygames.github.io/PFGuideArchive/archive/Try Fighting Without Pants! A Guide to Dirty Tricks/TryFightingWithoutPantsAGuidetoDirtyTricks.html
 https://feeneygames.github.io/PFGuideArchive/archive/Weirdo's Guide to Gestalt/WeirdosGuidetoGestalt.html
 https://feeneygames.github.io/PFGuideArchive/archive/Kineticist Damage Calculator.xlsx
+https://feeneygames.github.io/PFGuideArchive/archive/The Spell Codex.xlsx
 https://feeneygames.github.io/PFGuideArchive/archive/Core+ Wizard Guide (Zenith Games Copy)/CoreWizardGuide_ZenithGamesCopy_.html
 https://feeneygames.github.io/PFGuideArchive/archive/WAY OF THE ANGRY BEAR 3.pdf
